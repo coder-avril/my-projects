@@ -1,0 +1,203 @@
+{
+  "homeInfo": {
+    "title": "首页",
+    "href": "page/welcome.html"
+  },
+  "logoInfo": {
+    "title": "GCJ - PMS",
+    "image": "images/logo.png",
+    "href": ""
+  },
+  "menuInfo": [
+    {
+      "title": "项目管理",
+      "icon": "fa fa-lemon-o",
+      "href": "",
+      "target": "_self",
+      "child": [
+        {
+            "title": "考勤",
+            "href": "",
+            "icon": "fa fa-calendar",
+            "target": "_self",
+            "child": [
+              {
+                "title": "快速签到",
+                "href": "page/test0.html",
+                "icon": "fa fa-plane",
+                "target": "_self"
+              },
+              {
+                "title": "今日在线",
+                "href": "page/test1.html",
+                "icon": "fa fa-desktop",
+                "target": "_self"
+              },
+              {
+                "title": "一键下班",
+                "href": "page/test2.html",
+                "icon": "fa fa-power-off",
+                "target": "_self"
+              }
+            ]
+        },
+        {
+          "title": "项目管理",
+          "href": "",
+          "icon": "fa fa-recycle",
+          "target": "_self",
+          "child": [
+            {
+              "title": "立项申请",
+              "href": "page/project-form-step.html",
+              "icon": "fa fa-edit",
+              "target": "_self"
+            },
+            {
+              "title": "审批",
+              "href": "page/test3.html",
+              "icon": "fa fa-gavel",
+              "target": "_self"
+            },
+            {
+              "title": "项目集状况一览",
+              "href": "page/test4.html",
+              "icon": "fa fa-bar-chart-o",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "工作Task管理",
+          "href": "",
+          "icon": "fa fa-calendar-o",
+          "target": "_self",
+          "child": [
+            {
+              "title": "Task登录",
+              "href": "page/test5.html",
+              "icon": "fa fa-edit",
+              "target": "_self"
+            },
+            {
+              "title": "员工Task一览",
+              "href": "page/test6.html",
+              "icon": "fa fa-bar-chart",
+              "target": "_self"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "企业论坛",
+      "icon": "fa fa-slideshare",
+      "href": "",
+      "target": "_self",
+      "child": [
+        {
+          "title": "公告通知",
+          "href": "",
+          "icon": "fa fa-bullhorn",
+          "target": "",
+          "child": [
+            {
+                "title": "国创资讯",
+                "href": "page/test7.html",
+                "icon": "fa fa-folder-open",
+                "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "休闲灌水",
+          "href": "",
+          "icon": "fa fa-comments",
+          "target": "",
+          "child": [
+            {
+                "title": "达盖尔的旗帜",
+                "href": "page/test8.html",
+                "icon": "fa fa-gamepad",
+                "target": "_self"
+            },
+            {
+                "title": "技术讨论",
+                "href": "page/test9.html",
+                "icon": "fa fa-keyboard-o",
+                "target": "_self"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "系统管理",
+      "icon": "fa fa-address-book",
+      "href": "",
+      "target": "_self",
+      "child": [
+        {
+          "title": "用户管理",
+          "href": "",
+          "icon": "fa fa-gears",
+          "target": "_self",
+          "child": [
+            {
+              "title": "用户",
+              "href": "page/sysUser.html",
+              "icon": "fa fa-user-circle",
+              "target": "_self"
+            },
+            {
+              "title": "角色",
+              "href": "page/sysRole.html",
+              "icon": "fa fa-user",
+              "target": "_self"
+            },
+            {
+              "title": "权限",
+              "href": "page/sysResource.html",
+              "icon": "fa fa-key",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "数据字典",
+          "href": "",
+          "icon": "fa fa-newspaper-o",
+          "target": "_self",
+          "child": [
+            {
+              "title": "类型",
+              "href": "page/dictType.html",
+              "icon": "fa fa-cube",
+              "target": "_self"
+            },
+            {
+              "title": "项目",
+              "href": "page/dictItem.html",
+              "icon": "fa fa-cubes",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "帮助",
+          "href": "",
+          "icon": "fa fa-h-square",
+          "target": "_self",
+          "child": [
+            {
+              "title": "用户须知",
+              "href": "page/test99.html",
+              "icon": "fa fa-heartbeat",
+              "target": "_self"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

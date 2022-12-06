@@ -1,0 +1,90 @@
+<style>
+    .layui-form-item .layui-input-company {width: auto;padding-right: 10px;line-height: 38px;}
+</style>
+<div class="layuimini-container layuimini-page-anim">
+    <div class="layuimini-main">
+
+        <div class="layui-form layuimini-form" lay-filter="test-user-form">
+            <input type="hidden" name="id">
+            <div class="layui-form-item">
+                <label class="layui-form-label required">管理账号</label>
+                <div class="layui-input-block">
+                    <input type="text" name="username" lay-verify="required" lay-reqtext="管理账号不能为空" placeholder="请输入管理账号" class="layui-input" disabled>
+                    <tip>填写自己管理账号的名称。</tip>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label required">昵称</label>
+                <div class="layui-input-block">
+                    <input type="text" name="nickname" lay-verify="required" lay-reqtext="昵称不能为空" placeholder="请输入昵称" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label">备注信息</label>
+                <div class="layui-input-block">
+                    <textarea name="remark" class="layui-textarea" placeholder="请输入备注信息"></textarea>
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button class="layui-btn layui-btn-normal" lay-submit lay-filter="saveBtn">确认保存</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    layui.use(['form','miniPage'], function () {
+        var form = layui.form,
+            layer = layui.layer,
+            miniPage = layui.miniPage;
+
+        /**
+         * 初始化表单，要加上，不然刷新部分组件可能会不加载
+         */
+        form.render();
+        // 给表单赋值 "test-user-form" 即 class="layui-form" 所在元素属性 lay-filter="" 对应的值
+        form.val("test-user-form", Datas.get().user);
+
+        //监听提交
+        form.on('submit(saveBtn)', function (data) {
+            // data = JSON.stringify(data.field);
+            // Ajaxs.loadPost({
+            //     uri: 'userSetting/update',
+            //     data,
+            //     dataType: "json", 
+            //     contentType: "application/json;charset=UTF-8",
+            //     success: (response) => {
+            //         Datas.remove(USER);
+            //         var index = layer.alert("用户信息更新，请重新登录", {icon: 0}, function () {
+            //             location.href = 'page/login.html'
+            //         });
+            //     },
+            //     error: function (result) {
+            //         layer.alert(result.responseJSON.msg, {icon: 2});
+            //     }
+            // })
+            data = data.field;
+            Ajaxs.loadPost({
+                uri: 'userSetting/save',
+                data,
+                success: (response) => {
+                    Datas.remove(USER);
+                    var index = layer.alert("用户信息更新，请重新登录", {icon: 0}, function () {
+                        // 提示
+                        Layers.msgSuccess('退出登录成功', () => {
+                            location.href = 'page/login.html'
+                        })
+                    });
+                },
+                error: function (result) {
+                    layer.alert(result.responseJSON.msg, {icon: 2});
+                }
+            })
+
+            return false;
+        });
+
+    });
+</script>
